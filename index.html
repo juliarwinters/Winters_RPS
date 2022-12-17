@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Julia Winters">
+    <meta name="description" content="Rock, paper, scissors game">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Luckiest-Guy|Merriweather|Farro|Anton|Roboto">
+  </head>
+  <body onload="load()">
+    <div class="background">
+      <header class="header">
+      </header>
+      <article class="article">
+        <div class="layout instruct">
+          <h1 class="instructIntro">Welcome to Rock, Paper, Scissors!</h1>
+          <p class="instructDirect">Choose either rock, paper, or scissors by clicking one of the three icons below:</p>
+        </div>
+        <div class="bothChoices">
+          <div class="layout playChoice">
+            <h2 class="playChoiceLabel">Your Choice</h2>
+            <div class="choiceCont">
+              <img src="img/rock.svg" alt="Rock" class="choice" id="rock" onclick="game('rock')">
+              <img src="img/paper.svg" alt="Paper" class="choice" id="paper" onclick="game('paper')">
+              <img src="img/scissors.svg" alt="Scissors" class="choice" id="scissors" onclick="game('scissors')">
+            </div>
+          </div>
+          <div class="vs">
+            <p>V.S.</p>
+          </div>
+          <div class="layout compChoice">
+            <h2 class="compChoiceLabel">Opponent's Choice</h2>
+            <div class="centerQuestMark">
+              <img src="img/questionMark.svg" alt="Question mark" id="questMark">
+            </div>
+          </div>
+        </div>
+        <div class="layout results">
+          <h3 id="resultsMsg">Best of luck!</h3>
+          <div class="scoreCont">
+            <div class="score wins">
+              <p class="scoreLabel" id="winLabel">Wins:</p>
+              <p class="scoreCount" id="winCount">0</p>
+            </div>
+            <div class="score loses">
+              <p class="scoreLabel" id="loseLabel">Loses:</p>
+              <p class="scoreCount" id="loseCount">0</p>
+            </div>
+            <div class="score ties">
+              <p class="scoreLabel" id="tieLabel">Ties:</p>
+              <p class="scoreCount" id="tieCount">0</p>
+            </div>
+          </div>
+          <button type="reset" class="reset" onclick="reset()">Reset</button>
+        </div>
+      </article>
+      <footer class="footer">
+      </footer>
+    </div>
+    <script type="text/javascript" src="page.js"></script>
+  </body>
+</html>
